@@ -1,13 +1,13 @@
 <?php
 require_once "../src/funções.php";
 
-if (!isset($_GET['nome'])) {
+if (!isset($_GET['cpf'])) {
     header("Location:  listar_clientes.php");
     exit;
 }
 
-$nome = $_GET['nome'];
-$cliente = buscarCliente($nome);
+$cpf = $_GET['cpf'];
+$cliente = buscarCliente($cpf);
 
 if (!$cliente) {
     header("Location:  listar_clientes.php");
@@ -31,8 +31,7 @@ if (!$cliente) {
             </div>
             <div class="card-body">
                 <form method="POST" enctype="multipart/form-data" action="../src/funções.php">
-                <!-- <input type="hidden" name="acao" value="editar">
-                <input type="hidden" name="nome_antigo" value="<?= htmlspecialchars($cliente[0]) ?>"> -->
+                    <input type="hidden" name="original_cpf" value="<?= $cpf ?>">
 
                     <div class="mb-3">
                         <label class="form-label">Nome:</label>

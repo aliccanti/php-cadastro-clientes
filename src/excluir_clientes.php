@@ -1,7 +1,7 @@
 <?php
 require_once "../src/funções.php";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['nome'])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['nome']) ) {
     $nome = $_POST['nome'];
     excluirCliente($nome);
 } elseif ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET['nome'])) {

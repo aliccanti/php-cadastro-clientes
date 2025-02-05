@@ -35,7 +35,7 @@ require_once "../src/funções.php";
                     echo "<td>" . $cliente[7] . "</td>";
                     echo "<td><img src='" . $cliente[8] . "' width='100px' height='100px'></td>";
                     echo "<td>
-                    <a href='editar_clientes.php?nome=" . urlencode($cliente[0]) . "' class='btn btn-primary'>Editar</a>
+                    <a href='editar_clientes.php?cpf=" . urlencode($cliente[4]) . "' class='btn btn-primary'>Editar</a>
                     <form method='POST' action='excluir_clientes.php' style='display:inline;'>
                         <input type='hidden' name='nome' value='" . htmlspecialchars($cliente[0]) . "'>
                         <button type='submit' class='btn btn-danger'>Excluir</button>
