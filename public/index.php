@@ -1,6 +1,6 @@
 <?php
 
-require_once "../src/funções.php";
+require_once "../src/cadastrar_clientes.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -18,7 +18,7 @@ require_once "../src/funções.php";
                 <h2>Cadastro de Clientes</h2>
             </div>
             <div class="card-body">
-                <form action="index.php" method="POST" enctype="multipart/form-data" action="../src/funções.php">
+                <form action="index.php" method="POST" enctype="multipart/form-data" action="../src/cadastrar_clientes.php">
                     <div class="mb-3">
                         <label class="form-label">Nome</label>
                         <input type="text" name="nome" class="form-control" required>
@@ -38,7 +38,7 @@ require_once "../src/funções.php";
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Faixa Etária</label>
+                        <label class="form-label">Faixa Etária</label>//radom button
                         <select name="faixa_etaria" class="form-control">
                             <option value="18-">Menor de 18</option>
                             <option value="18-25">18-25</option>
@@ -64,7 +64,7 @@ require_once "../src/funções.php";
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Hobbies</label>
+                        <label class="form-label">Hobbies</label>//check box
                         <input type="text" name="hobbies" class="form-control" placeholder="Ex: ler, escrever, dançar, jogar bola...">
                     </div>
 
